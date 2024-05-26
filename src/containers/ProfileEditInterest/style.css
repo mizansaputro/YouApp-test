@@ -1,0 +1,6 @@
+.ant-select-selection-item {
+  @apply !bg-white !bg-opacity-10;
+}
+.anticon-close {
+  @apply !text-white;
+}

@@ -1,0 +1,21 @@
+.menu-container {
+  @apply bg-[#0E191F] min-h-[120px] pt-[8px] pb-[23px] pl-[27px] pr-[14px] rounded-[14px] flex flex-col gap-7;
+}
+
+.ant-upload {
+  @apply !border-none !bg-white !bg-opacity-[6%] !rounded-[17px] !w-[57px] !h-[57px];
+}
+
+.ant-upload-list-item-container {
+  @apply !rounded-[17px] !w-[57px] !h-[57px];
+}
+.ant-upload-list-item {
+  @apply !border-none !bg-white !bg-opacity-[6%] !w-full !h-full !p-0;
+}
+
+.input-custom-2 {
+  @apply text-[13px] font-medium;
+}
+.input-custom-2 input {
+  @apply text-[13px] font-medium !text-right;
+}
