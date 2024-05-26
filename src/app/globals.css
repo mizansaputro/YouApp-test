@@ -3,25 +3,52 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  @apply bg-main text-white;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  @apply min-h-[100dvh];
+}
+
+.header-container {
+  @apply flex items-center justify-between gap-4;
+}
+
+.button-text {
+  @apply text-white hover:!text-blue-400 active:!text-blue-600 !p-0;
+}
+.main-container {
+  @apply flex flex-col xl:mx-[50dvh] xl:h-[50dvh] xl:bg-white xl:bg-opacity-10 xl:rounded-lg xl:p-4 xl:justify-center;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 ANTD CUSTOM                                */
+/* -------------------------------------------------------------------------- */
+.button-custom {
+  @apply text-white font-bold bg-gradient-1 disabled:bg-gradient-1 disabled:text-white disabled:opacity-30 rounded-lg;
+}
+
+.input-custom {
+  @apply text-[13px] font-medium;
+}
+
+.ant-select-selector,
+.ant-picker {
+  @apply !border-white !border-opacity-[22%] focus:!border-white focus:!border-opacity-40 !rounded-lg !bg-[#D9D9D90F] !bg-opacity-[6%] focus:!bg-[#D9D9D90F] focus:!bg-opacity-40 !text-white !text-[13px] !font-medium placeholder:!text-white placeholder:!opacity-30;
+}
+.ant-picker-input input {
+  @apply !text-right !text-[13px] !font-medium placeholder:!text-white placeholder:!opacity-30;
+}
+
+.ant-select-focused .ant-select-selection-item {
+  @apply !text-white opacity-50;
+}
+.ant-select-selection-placeholder {
+  @apply !text-[13px] !font-medium !text-white !opacity-30 text-right;
+}
+.ant-select-arrow {
+  @apply !text-white;
+}
+
+.ant-message-notice-content {
+  @apply !bg-gray-600  text-white;
 }
